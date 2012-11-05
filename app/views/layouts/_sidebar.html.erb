@@ -1,0 +1,16 @@
+<% if current_user.try(:admin?) %>
+  <nav id="functional_nav">      
+    <ul>
+      <li><%= link_to 'Add an article', new_article_path %></li>         
+    	<%= yield :functional_nav %>				      	
+    </ul>      			
+		<% if content_for?(:sidebar) %>
+			<%= yield :sidebar %>
+		<% end %>
+	</nav> 
+<% end %>
+<% if current_user %>
+	<div id="subsribe_newsletter">  
+		<%= render "newsletter/newsletter_form" %>
+	</div>
+<% end %>

@@ -1,0 +1,99 @@
+//-----------------------------------------
+// Import variables
+//-----------------------------------------
+
+@import "variables";
+
+//-----------------------------------------
+// Imports css framework
+//-----------------------------------------
+
+@import 'bootstrap';
+
+//-----------------------------------------
+// main element
+//-----------------------------------------
+
+body{
+}
+
+.container{
+	width: 1270px !important;
+	font-family: Verdana,Lucida Sans Regular,Lucida Sans Unicode,Arial,sans-serif !important;
+}
+
+//-----------------------------------------
+// navigation
+//-----------------------------------------
+#user_nav{
+  @extend .pull-right;
+}
+
+#nav_login, #nav_header, #user_nav, #functional_nav{
+  @extend .nav;
+}
+
+#nav_login{
+  @extend .pull-right;
+}
+
+#nav_header{
+  @extend .pull-left;
+}
+
+//-----------------------------------------
+// header
+//-----------------------------------------
+#page_header{
+  @extend .navbar;
+  @extend .navbar-fixed-top;
+}
+
+#header_inner{
+  @extend .navbar-inner;
+}
+
+//-----------------------------------------
+// footer
+//-----------------------------------------
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  color: $grayDark !important;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+//-----------------------------------------
+// section
+//-----------------------------------------
+
+section#content { 
+	float: left;
+	width: 100%;
+	margin-right: 50px;
+} 
+
+section#sidebar {
+	float: left;
+	width: 265px;
+}
+
+
+
