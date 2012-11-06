@@ -3,5 +3,13 @@
     <ul id="nav_header">
       <li><%= nav_tab 'Home', root_path, current: current_tab %></li>
     </ul>
+    <ul id="nav_login">
+	 	 	<% if user_signed_in? %>
+		    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+		  <% else %>
+		  	<li><%= nav_tab "Sign up", new_user_registration_path, current: current_tab %></li>
+		    <li><%= nav_tab "Sign in", new_user_session_path, current: current_tab %></li>
+		  <% end %>
+    </ul>    
   </nav>
 <% end %>

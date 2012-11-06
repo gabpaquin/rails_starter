@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render 'layouts/header' %>
-  <div class='container' style="margin-top:60px">
-    <section id='content'>
-      <%= render 'layouts/notification' %>
-      <%= yield %>
-    </section>
-    <% if content_for?(:sidebar) %>
-    <section id='sidebar'>
-      <%= content_for?(:sidebar) ? yield(:sidebar) : render('layouts/sidebar') %>
-    </section>
-    <% end %>
-  </div>  
-
-  <%= render 'layouts/footer' %>
-</body>
+  <%= render 'layouts/head' %>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class='container'>
+      <section id='content'>
+        <%= render 'layouts/notification' %>
+        <%= yield %>
+      </section>
+      <% if content_for?(:sidebar) %>
+      <section id='sidebar'>
+        <%= content_for?(:sidebar) ? yield(:sidebar) : render('layouts/sidebar') %>
+      </section>
+      <% end %>
+    </div> 
+    <%= render 'layouts/footer' %>
+  </body>
 </html>

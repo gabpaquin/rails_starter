@@ -1,4 +1,6 @@
 Vocabulary::Application.routes.draw do
+  devise_for :users
+
   # get "blog/index"
 
   # The priority is based upon order of creation:

@@ -15,12 +15,10 @@
 //-----------------------------------------
 
 body{
+  padding-top: 160px;
 }
 
-.container{
-	width: 1270px !important;
-	font-family: Verdana,Lucida Sans Regular,Lucida Sans Unicode,Arial,sans-serif !important;
-}
+
 
 //-----------------------------------------
 // navigation
@@ -44,8 +42,9 @@ body{
 //-----------------------------------------
 // header
 //-----------------------------------------
-#page_header{
+#header_wrapper{
   @extend .navbar;
+  @extend .navbar-inverse;
   @extend .navbar-fixed-top;
 }
 
@@ -53,11 +52,37 @@ body{
   @extend .navbar-inner;
 }
 
+#header_logo{
+  $masterHeadHeight: 105px;
+  height: 105px;
+  background-color: #eff5f5;
+  img{
+    $imgHeight: 45px;
+    padding-top: ($masterHeadHeight - $imgHeight) / 2 - 1;
+    padding-right: 45px;
+  }
+
+  h1{
+    display: inline-block;
+    padding-top: ($masterHeadHeight - 36px) / 2 - 1;
+  }
+
+  ul {
+    margin: 0 !important;
+    float: left;
+    list-style: none;
+    li {
+      float: left;
+    }
+  }  
+}
+
 //-----------------------------------------
 // footer
 //-----------------------------------------
 
 footer {
+  @extend .navbar-fixed-bottom;
   margin-top: 45px;
   padding-top: 5px;
   color: $grayDark !important;
