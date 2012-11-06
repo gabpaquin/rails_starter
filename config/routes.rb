@@ -1,4 +1,4 @@
-RailsStarter::Application.routes.draw do
+Vocabulary::Application.routes.draw do
   # get "blog/index"
 
   # The priority is based upon order of creation:
